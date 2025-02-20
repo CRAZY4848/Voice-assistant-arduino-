@@ -1,7 +1,6 @@
 import serial
 import speech_recognition as sr
 from difflib import get_close_matches
-import ollama
 
 # Load FAQ data properly
 faq_data = {}
@@ -47,12 +46,7 @@ def get_faq_answer(question):
         print("✅ Best Match Found:", best_match)
         return faq_data[best_match]
 
-    return None  # No match found
-
-# Function to get AI-generated response from Llama 3.2
-def get_llama_response(question):
-    response = ollama.chat(model="llama3.2", messages=[{"role": "user", "content": question}])
-    return response["message"]["content"][:32]  # Limit to 32 characters for LCD
+    return "Not Available"  # No match found, display this on LCD
 
 # Initialize microphone and serial communication
 recognizer = sr.Recognizer()
@@ -71,11 +65,8 @@ while True:
         question = recognizer.recognize_google(audio)
         print("📝 User asked:", question)
 
-        # First check the FAQ
+        # Check FAQ only (Llama 3.2 removed)
         answer = get_faq_answer(question)
-        if not answer:
-            print("❌ Not found in FAQ, sending to Llama...")
-            answer = get_llama_response(question)  # If not in FAQ, ask Llama 3.2
 
         # Send answer to Arduino
         print("💡 Answer:", answer)
