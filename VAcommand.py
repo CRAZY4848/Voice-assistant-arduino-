@@ -1,30 +1,52 @@
+ import serial
 import speech_recognition as sr
-import serial
-import time
+from difflib import get_close_matches
+import ollama
 
-arduino = serial.Serial('COM3', 9600, timeout=1)  # Change COM port if needed
-time.sleep(2)  # Wait for Arduino to initialize
+# Load FAQ data
+faq_data = {}
+with open("college_faq.txt", "r", encoding="utf-8") as f:
+    for line in f:
+        question, answer = line.strip().split(":", 1)
+        faq_data[question.lower()] = answer.strip()
 
+# Function to find the best FAQ match
+def get_faq_answer(question):
+    matches = get_close_matches(question.lower(), faq_data.keys(), n=1, cutoff=0.7)
+    if matches:
+        return faq_data[matches[0]]
+    return None
+
+# Function to get AI-generated response from Llama 3.2
+def get_llama_response(question):
+    response = ollama.chat(model="llama3.2", messages=[{"role": "user", "content": question}])
+    return response["message"]["content"][:32]  # Limit to 32 characters
+
+# Initialize microphone and serial communication
 recognizer = sr.Recognizer()
+mic = sr.Microphone()
+arduino = serial.Serial('COM3', 9600)  # Change to the correct port (e.g., /dev/ttyUSB0 for Linux)
 
-def listen():
-    with sr.Microphone() as source:
+print("Assistant is running...")
+
+while True:
+    with mic as source:
         print("Listening...")
         recognizer.adjust_for_ambient_noise(source)
         audio = recognizer.listen(source)
+
     try:
-        command = recognizer.recognize_google(audio).lower()
-        print("You said:", command)
-        return command
-    except:
-        return ""
+        question = recognizer.recognize_google(audio)
+        print("User asked:", question)
 
-while True:
-    command = listen()
+        # First check the FAQ
+        answer = get_faq_answer(question)
+        if not answer:
+            answer = get_llama_response(question)  # If not in FAQ, ask Llama 3.2
 
-    if "turn on light" in command:
-        arduino.write(b"turn on light\n")
-    elif "turn off light" in command:
-        arduino.write(b"turn off light\n")
-    elif "exit" in command:
-        break
+        # Send answer to Arduino
+        print("Answer:", answer)
+        arduino.write((answer + "\n").encode())
+
+    except Exception as e:
+        print("Error:", str(e))
