@@ -1,104 +1,103 @@
 Q: What is the full name of the college?
+Q: College full name?
+Q: Official name of the college?
 A: Agurchand Manmull Jain College.
 
 Q: Where is the college located?
+Q: What is the college address?
+Q: College location?
+Q: Where is AM Jain College?
 A: Meenambakkam, Chennai, India.
 
 Q: What is the official website?
+Q: What is the website?
+Q: College website?
+Q: Where can I check details online?
 A: https://www.amjaincollege.edu.in/
 
 Q: How can I contact admissions?
+Q: Contact for admission?
+Q: Admission phone number?
+Q: How to reach the admission office?
 A: Call 044 2224 8603 or email.
 
 Q: What undergraduate courses are offered?
+Q: List of UG courses?
+Q: What bachelor's degrees are available?
 A: B.Sc, B.Com, B.A.
 
 Q: What postgraduate courses are available?
+Q: List of PG courses?
+Q: What master's degrees are available?
 A: M.Sc, M.A.
 
-Q: Eligibility for B.Sc programs?
+Q: What is the eligibility for B.Sc programs?
+Q: Requirements for B.Sc admission?
+Q: B.Sc admission criteria?
 A: Minimum 60% in 12th grade.
 
-Q: Eligibility for B.Com programs?
+Q: What is the eligibility for B.Com programs?
+Q: Requirements for B.Com admission?
+Q: B.Com admission criteria?
 A: Minimum 55% in Commerce.
 
-Q: Eligibility for B.A. programs?
+Q: What is the eligibility for B.A. programs?
+Q: Requirements for B.A. admission?
+Q: B.A. admission criteria?
 A: Minimum 50% in any stream.
 
-Q: Eligibility for M.Sc programs?
+Q: What is the eligibility for M.Sc programs?
+Q: Requirements for M.Sc admission?
+Q: M.Sc admission criteria?
 A: Bachelor’s degree with 65%.
 
-Q: Eligibility for M.A. programs?
+Q: What is the eligibility for M.A. programs?
+Q: Requirements for M.A. admission?
+Q: M.A. admission criteria?
 A: Bachelor’s degree with 60%.
 
 Q: How can I apply for admission?
+Q: Admission procedure?
+Q: Steps to apply for admission?
 A: Online and offline available.
 
-Q: Is there an entrance exam?
-A: No, direct admission available.
-
-Q: When do admissions open?
-A: Every year in April.
-
-Q: What is the last date to apply?
-A: Varies, check website.
-
-Q: Can I apply if I have a backlog?
-A: No, clear backlogs first.
-
-Q: Do I need migration certificate?
-A: Yes, for other state students.
-
-Q: Is there a counseling process?
-A: No, direct admission.
-
-Q: What documents are required?
-A: 12th mark sheet, ID proof.
-
-Q: Is there a reservation quota?
-A: Yes, per govt. guidelines.
-
-Q: Can I apply without 12th results?
-A: Yes, with provisional marks.
-
-Q: Fees for B.Sc programs?
-A: ₹70,000 per year.
-
-Q: Fees for B.Com programs?
-A: ₹65,000 per year.
-
-Q: Fees for B.A. programs?
-A: ₹60,000 per year.
-
-Q: Fees for M.Sc programs?
-A: ₹80,000 per year.
-
-Q: Fees for M.A. programs?
-A: ₹75,000 per year.
-
-Q: Does the college have hostels?
-A: Yes, hostel facilities available.
-
 Q: Are scholarships available?
+Q: Does the college offer scholarships?
+Q: Scholarship opportunities?
 A: Yes, govt & management schemes.
 
 Q: What facilities are available?
+Q: College facilities?
+Q: What amenities does the college provide?
 A: Library, labs, Wi-Fi, sports.
 
-Q: To which university is it affiliated?
+Q: To which university is the college affiliated?
+Q: College affiliated university?
+Q: Which university is AM Jain College under?
 A: University of Madras.
 
 Q: Does the college offer placements?
+Q: Placement support?
+Q: Are there job opportunities?
 A: Yes, placement support exists.
 
 Q: Which companies visit for placements?
+Q: Recruiters at AM Jain College?
+Q: Companies hiring from college?
 A: Infosys, Wipro, TCS, HDFC.
 
 Q: What is the average placement salary?
+Q: Average salary after placement?
+Q: How much do students earn on average?
 A: ₹6 LPA.
 
 Q: What are the college timings?
+Q: College working hours?
+Q: Class timings at AM Jain College?
 A: 8:30 AM - 1:00 PM / 1:35 - 6 PM.
 
 Q: Unique features of the college?
+Q: What makes AM Jain College special?
+Q: Special programs or features?
 A: Sports, NCC, natural campus.
+
