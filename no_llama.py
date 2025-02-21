@@ -5,14 +5,14 @@ from difflib import get_close_matches
 # Load FAQ data properly
 faq_data = {}
 with open("college_faq.txt", "r", encoding="utf-8") as f:
-    question = None
+    answer = None
     for line in f:
         line = line.strip()
         if line.startswith("Q: "):  
             question = line.replace("Q: ", "").strip()  # Remove "Q: "
-        elif line.startswith("A: ") and question:
-            answer = line.replace("A: ", "").strip()  # Remove "A: "
-            faq_data[question.lower()] = answer  # Store in dictionary
+            faq_data[question.lower()] = answer  # Store question-answer pair
+        elif line.startswith("A: "):
+            answer = line.replace("A: ", "").strip()  # Store answer for next questions
 
 # Function to find the best FAQ match
 def get_faq_answer(question):
@@ -65,7 +65,7 @@ while True:
         question = recognizer.recognize_google(audio)
         print("📝 User asked:", question)
 
-        # Check FAQ only (Llama 3.2 removed)
+        # Check FAQ only
         answer = get_faq_answer(question)
 
         # Send answer to Arduino
