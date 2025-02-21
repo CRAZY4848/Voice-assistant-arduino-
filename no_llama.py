@@ -46,7 +46,7 @@ def get_faq_answer(question):
         print("✅ Best Match Found:", best_match)
         return faq_data[best_match]
 
-    return "Not Available"  # No match found, display this on LCD
+    return "kindly ask the staffs"  # No match found, display this on LCD
 
 # Initialize microphone and serial communication
 recognizer = sr.Recognizer()
